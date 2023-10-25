@@ -1,0 +1,76 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #fff; /* Establece el color de fondo a blanco */
+}
+
+.container {
+    position: relative;
+}
+
+/* Estilos para el modal de escritorio */
+.desktop-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+    color: #fff;
+    text-align: center;
+    display: none; /* Inicialmente oculto */
+}
+
+/* Estilos para el contenido principal */
+.content {
+    position: relative;
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.centered-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; /* Establece el color del texto a blanco */
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+button.subscribe-button {
+    background-color: #ff6600; /* Color de fondo del botón */
+    color: #fff; /* Color de texto del botón */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+button.subscribe-button:hover {
+    background-color: #ff3300; /* Cambia el color al pasar el mouse */
+}
+
+p {
+    font-size: 1rem;
+}
+
+a {
+    color: #ff6600; /* Color de enlace */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
