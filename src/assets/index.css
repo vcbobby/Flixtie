@@ -4,13 +4,53 @@ body {
     padding: 0;
     overflow: hidden;
     font-family: Arial, sans-serif;
-    background-color: #fff; /* Establece el color de fondo a blanco */
+    background-color: #000000; /* Establece el color de fondo a blanco */
+}
+.content {
+    position: relative;
+    overflow: hidden;
+    background-color: #000000; /* Color de fondo de respaldo */
+    margin: 0 auto;
+}
+
+/* Agrega la imagen de fondo */
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./imgs/bg_mobile1.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
 }
 
 .container {
+    display: flex;
     position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+.centered-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
+div .svg {
+    width: 300px; /* El 80% del ancho del contenedor */
+    display: block; /* Elimina cualquier espacio adicional debajo del objeto */
+    margin: 20px 0; /* 20px de margen arriba y abajo, 0 en los lados */
+}
+.svg-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 /* Estilos para el modal de escritorio */
 .desktop-modal {
     position: fixed;
@@ -25,41 +65,29 @@ body {
 }
 
 /* Estilos para el contenido principal */
-.content {
-    position: relative;
-    overflow: hidden;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 .centered-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
+
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
     color: #fff; /* Establece el color del texto a blanco */
 }
 
-h1 {
-    font-size: 2rem;
-}
-
 button.subscribe-button {
-    background-color: #ff6600; /* Color de fondo del botón */
-    color: #fff; /* Color de texto del botón */
+    background-color: #ff6600;
+    color: #fff;
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
     margin-top: 20px;
     cursor: pointer;
+    border-radius: 19px; /* Hace que el botón sea redondo */
 }
 
 button.subscribe-button:hover {
-    background-color: #ff3300; /* Cambia el color al pasar el mouse */
+    background-color: #ff3300;
 }
 
 p {
