@@ -26,9 +26,8 @@
                 <div class="centered-content">
                     <img src="./assets/imgs/logo.png" alt="Logo de Lixtie" />
                     
-                    <button id="subscribe-button" class="subscribe-button">
-                        Suscribirse
-                    </button>
+                    <!-- Botón para abrir el modal -->
+                    <button id="open-modal" class="subscribe-button">Suscribirse</button>
                     <div class="svg-container">
                     <image class="svg" src="./assets/imgs/precio.svg" alt="Precios">
                     <image class="svg" src="./assets/imgs/text.svg" alt="Informacion">
@@ -38,6 +37,29 @@
                     >
                 </div>
             </div>
+
+
+            <!-- Modal oculto inicialmente -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <button id="close-modal" class="close-button">×</button>
+                    <!-- Contenido del modal -->
+                    <image class="svg" src="./assets/imgs/timeline.svg" alt="timeline">
+                        
+                    <button id="confirm-button" class="confirm-button">Confirmar Suscripción</button>
+                    <image class="svg" src="./assets/imgs/precio.svg" alt="Precios">
+                    <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
+                </div>
+            </div>
+
+            <!-- Segundo modal (inicialmente oculto) -->
+            <div id="success-modal" class="modal">
+                <div class="modal-content modal-content-success success-modal">
+                    <h2>Suscripción Exitosa</h2>
+                    <button id="close-success-modal" class="close-button">×</button>
+                </div>
+            </div>
+
         </div>
         <script src="./scripts/index.js"></script>
     </body>
