@@ -4,6 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Flixtie</title>
+        <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css"/>
+
         <link rel="stylesheet" href="./assets/index.css" />
         <link
             rel="stylesheet"
@@ -25,9 +27,15 @@
                 <img src="./assets/imgs/bg_mobile1.png" alt="Fondo de Lixtie" />
                 <div class="centered-content">
                     <img src="./assets/imgs/logo.png" alt="Logo de Lixtie" />
-                    
+                    <div class="phone-input">
+                        <select>
+                            <option value="56">(+56)</option>
+                            <!-- Agrega más opciones para otros códigos de país si es necesario -->
+                        </select>
+                        <input id="phone-input" type="number" placeholder="Número de teléfono" value="9">
+                    </div>
                     <!-- Botón para abrir el modal -->
-                    <button id="open-modal" class="subscribe-button disabled">Suscribirse</button>
+                    <button id="open-modal" class="subscribe-button disabled" style="margin-top:0">Suscribirse</button>
                     <div class="svg-container">
                     <image class="svg" src="./assets/imgs/precio.svg" alt="Precios">
                     <image class="svg" src="./assets/imgs/text.svg" alt="Informacion">
@@ -43,10 +51,15 @@
             <div id="modal" class="modal">
                 <div class="modal-content">
                     <button id="close-modal" class="close-button">×</button>
+                    
                     <!-- Contenido del modal -->
                     <image class="svg" src="./assets/imgs/timeline.svg" alt="timeline">
-                        
-                    <button id="confirm-button" class="confirm-button">Confirmar Suscripción</button>
+                    <!-- Campo de entrada para el código y el icono de la llave -->
+                    <div class="code-input">
+                        <i class="fas fa-key"></i> <!-- Agrega el icono de la llave aquí -->
+                        <input id="code-input" type="number" placeholder="Ingresa tu PIN numérico de 6 dígitos">
+                    </div>
+                    <button id="confirm-button" class="confirm-button disabled">Confirmar Suscripción</button>
                     <image class="svg" src="./assets/imgs/precio.svg" alt="Precios">
                     <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
                 </div>

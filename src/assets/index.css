@@ -189,3 +189,53 @@ a:hover {
     border: none;
     cursor: pointer;
 }
+.phone-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.phone-input select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.phone-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-left: 1px;
+}
+
+.code-input {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.code-input i {
+    font-size: 20px; /* Ajusta el tamaño del icono según tus preferencias */
+    margin-right: 2px;
+}
+
+.code-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.fa-key:before {
+    color: #000;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+button.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+    /* Otros estilos de tu preferencia para botones deshabilitados */
+}
