@@ -9,10 +9,17 @@ document.addEventListener('DOMContentLoaded', function () {
         })
 
     document
+        .getElementById('open-modal')
+        .addEventListener('click', function () {
+            document.getElementById('phone').style.display =
+                'none' /* oculta el input de numero de telefono */
+        })
+    document
         .getElementById('close-modal')
         .addEventListener('click', function () {
             document.getElementById('modal').style.display =
                 'none' /* Oculta el modal */
+            document.getElementById('phone').style.display = 'block'
         })
 
     document
@@ -40,8 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Agrega un evento de escucha al campo de entrada para verificar la longitud
     phoneInput.addEventListener('input', function () {
         // Verifica si la longitud del valor es menor o igual a 6
-        if (phoneInput.value.length <= 6) {
-            // Si es igual o menor a 6, deshabilita el botón
+        if (phoneInput.value.length <= 8) {
+            // Si es igual o menor a 9, deshabilita el botón
 
             modalButton.classList.add('disabled')
         } else {
@@ -52,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     codeInput.addEventListener('input', function () {
         // Verifica si la longitud del valor es menor o igual a 6
-        if (codeInput.value.length <= 6) {
+        if (codeInput.value.length <= 5) {
             // Si es igual o menor a 6, deshabilita el botón
 
             submitButton.classList.add('disabled')
